@@ -2,6 +2,6 @@ import os
 
 class SystemService:
 
-    @classmethod
+    @staticmethod
     def shutdown():
         os.system('poweroff')
