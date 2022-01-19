@@ -1,8 +1,8 @@
 class Battery:
-    def __init__(self, battery, power) -> None:
-         self.percent = battery.percent
-         self.status = battery.power_plugged
-         self.power = power
+    def __init__(self, percent: 10, power_off: int, status: bool) -> None:
+         self.percent = percent
+         self.status = status
+         self.power_off = power_off
     
     def __repr__(self) -> str:
-        return f"""Battery: {self.percent} Scheduled shutdown with: {self.power}%"""
+        return f"""Battery(percent={self.percent}, power_off={self.power_off}, status={self.status})"""
