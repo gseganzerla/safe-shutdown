@@ -9,6 +9,6 @@ class BatteryService:
         
 
     def should_shutdown(self):
-        if self.battery.percent <= self.battery.power and self.battery.status == False:
+        if self.battery.percent <= self.battery.power_off and self.battery.status == False:
             self.logger.write(self.battery)
             SystemService.shutdown() 

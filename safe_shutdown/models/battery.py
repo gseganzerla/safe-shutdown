@@ -1,5 +1,5 @@
 class Battery:
-    def __init__(self, percent: 10, power_off: int, status: bool) -> None:
+    def __init__(self, percent: int, power_off: int, status: bool) -> None:
          self.percent = percent
          self.status = status
          self.power_off = power_off
