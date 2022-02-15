@@ -8,7 +8,7 @@ scheduler = sched.scheduler()
 
 def run():
     device = psutil.sensors_battery()
-    battery = Battery(device.percent, 90, False)
+    battery = Battery(device.percent, 10, device.power_plugged)
     service = BatteryService(battery)
 
     service.should_shutdown()
