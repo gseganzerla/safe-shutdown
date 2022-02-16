@@ -1,0 +1,24 @@
+name: safe-shutdown
+base: core20
+version: git
+summary: A simple python script that shutdown the system when battery is low.
+description: |
+  A simple python script that shutdown the system when battery is lower than 10%.
+
+architectures:
+  - build-on: [amd64, arm64]
+
+grade: stable
+confinement: strict
+
+parts:
+  safe-shutdown:
+    plugin: python
+    source: .
+
+apps:
+  safe-shutdown:
+    command: bin/safe-shutdown
+    plugs:
+      - home
+      - hardware-observer
