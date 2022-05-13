@@ -16,9 +16,15 @@ parts:
     plugin: python
     source: .
 
+plugs:
+  config-log:
+    interface: system-files
+    write: [/var/log]
+
 apps:
   safe-shutdown:
     command: bin/safe-shutdown
     plugs:
-      - home
-      - hardware-observer
+      - hardware-observe
+      - config-log
+    daemon: simple

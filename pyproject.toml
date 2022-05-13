@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "safe-shutdown"
-version = "0.1.0"
-description = ""
+version = "1.1"
+description = "A simple python script that shutdown the system when battery is low."
 authors = ["Guilherme Seganzerla <g.seganzerla@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -12,6 +12,7 @@ psutil = "^5.9.0"
 pylint = "^2.12.2"
 yapf = "^0.32.0"
 poetry2setup = "^1.0.0"
+black = {version = "^22.3.0", allow-prereleases = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
