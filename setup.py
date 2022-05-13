@@ -15,13 +15,13 @@ entry_points = \
 
 setup_kwargs = {
     'name': 'safe-shutdown',
-    'version': '0.1.0',
-    'description': '',
+    'version': '1.1',
+    'description': 'A simple python script that shutdown the system when battery is low.',
     'long_description': None,
     'author': 'Guilherme Seganzerla',
     'author_email': 'g.seganzerla@gmail.com',
-    'maintainer': 'gseganzerla',
-    'maintainer_email': 'g.seganzerla@gmail.com',
+    'maintainer': None,
+    'maintainer_email': None,
     'url': None,
     'packages': packages,
     'package_data': package_data,

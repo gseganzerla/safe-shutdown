@@ -15,8 +15,6 @@ parts:
   safe-shutdown:
     plugin: python
     source: .
-    python-packages:
-      - psutil
 
 plugs:
   config-log:
@@ -27,7 +25,6 @@ apps:
   safe-shutdown:
     command: bin/safe-shutdown
     plugs:
-      - home
-      - upower-observe
+      - hardware-observe
       - config-log
     daemon: simple
