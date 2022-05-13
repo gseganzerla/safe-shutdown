@@ -15,10 +15,19 @@ parts:
   safe-shutdown:
     plugin: python
     source: .
+    python-packages:
+      - psutil
+
+plugs:
+  config-log:
+    interface: system-files
+    write: [/var/log]
 
 apps:
   safe-shutdown:
     command: bin/safe-shutdown
     plugs:
       - home
-      - hardware-observer
+      - upower-observe
+      - config-log
+    daemon: simple
